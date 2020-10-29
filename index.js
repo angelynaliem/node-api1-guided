@@ -60,8 +60,8 @@ server.put("/api/hubs/:id", (req, res) => {
   if (index !== -1) {
     changes.id = id;
     hubs[index] = changes;
-    // res.status(200).json(index, changes)
-    res.json(index, changes);
+    res.status(200).json(changes)
+    // res.json(index, changes);
   } else {
     res.status(404).json({ message: "id not found" });
   }
